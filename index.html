@@ -76,13 +76,26 @@
   </div>
   <div class="sfoglia" >
     <p class="centro tac pdt_120">Aggiungi giochi alla lista</p>
-    <div class="row centro spb pdb_50">
-      <div id="app" class="box">
-        <ol>
+    <div id="app" class="row centro spb pdb_50">
+      <div class="box tac">
+        <h5> Il tuo carrello</h5>
+        <ul class="column" v-if="games.length > 0">
           <li v-for="(game,index) in games">
-            {{game}}  <i class="fas fa-times"></i>
+            {{index+1 + ') ' + game}}
+            <i class="fas fa-times" @click = "removeGame(index)"></i>
           </li>
-        </ol>
+        </ul>
+        <h v-else>Il tuo carello è vuoto</h3>
+      </div>
+      <div class="box tac">
+        <h5> Il tuo cestino</h5>
+        <ul class="column">
+          <li v-for="(game,index) in gamesRemoved">
+            {{index+1 + ') ' + game}}
+            <i class="fas fa-trash-restore" @click = "restoreGame(index)"></i>
+            <i class="fas fa-times" @click = "deleteGame(index)"></i>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -95,6 +108,6 @@
 </main>
 
 
-  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.js"></script>
 </body>
 </html>

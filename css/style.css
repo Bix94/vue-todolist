@@ -98,10 +98,23 @@ button:hover{
   height: 500px;
 }
 
-
+h5{
+  margin-top: 20px;
+  font-size: 40px;
+}
+h5:hover{
+  color: #0172ce;
+}
 .box{
   border: 2px solid black;
   width: 45%;
-  height: 300px;
+  height: 500px;
   margin-top: 50px;
 }
+.box li{
+  font-size: 25px;
+  color: black;
+  margin-top: 25px;
+}
+
+/* https://i.pinimg.com/originals/2b/3c/32/2b3c32831151c3c0ac0a24e2241f5d7c.jpg */
