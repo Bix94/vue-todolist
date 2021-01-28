@@ -74,9 +74,13 @@
       <img src="https://image.api.playstation.com/pr/bam-art/111/742/c5baa9e8-22a6-4f9f-8223-d6f2371ace59.jpg?w=780&thumb=false" alt="">
     </div>
   </div>
-  <div class="sfoglia" >
-    <p class="centro tac pdt_120">Aggiungi giochi alla lista</p>
-    <div id="app" class="row centro spb pdb_50">
+  <div class="sfoglia" id="app">
+    <div class="column ricerca aic">
+      <p class="pdt_120">Aggiungi giochi alla lista</p>
+      <input class="tac" type="text" @keyup.enter="addGame" v-model="newGame" placeholder="Cerca gioco">
+      <button @click="addGame">Inserisci il gioco</button>
+    </div>
+    <div  class="row centro spb pdb_50">
       <div class="box tac">
         <h5> Il tuo carrello</h5>
         <ul class="column" v-if="games.length > 0">
@@ -84,17 +88,19 @@
             {{index+1 + ') ' + game}}
             <i class="fas fa-times" @click = "removeGame(index)"></i>
           </li>
+          <li class="erase">Svuota carrello <i class="fas fa-ban" @click = "erase"></i></li>
         </ul>
-        <h v-else>Il tuo carello è vuoto</h3>
+        <h3 v-else class="hidden">Il tuo carrello è vuoto<i class="fas fa-sad-tear"></i></h3>
       </div>
       <div class="box tac">
         <h5> Il tuo cestino</h5>
         <ul class="column">
-          <li v-for="(game,index) in gamesRemoved">
-            {{index+1 + ') ' + game}}
+          <li v-for="(game) in gamesRemoved">
+            {{ game }}
             <i class="fas fa-trash-restore" @click = "restoreGame(index)"></i>
             <i class="fas fa-times" @click = "deleteGame(index)"></i>
           </li>
+          <li class="erase" v-if="gamesRemoved.length > 0">Svuota Cestino <i class="fas fa-ban" @click = "eraseCestino"></i></li>
         </ul>
       </div>
     </div>

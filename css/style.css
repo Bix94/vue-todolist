@@ -56,7 +56,7 @@ li:hover{
 p{
   font-size: 50px;
 }
-button:hover{
+.btn:hover{
   transform: scale(1.1);
 }
 .btn{
@@ -75,7 +75,7 @@ button:hover{
 }
 
 .btn:hover{
-
+  transform: scale(1.1);
 }
 .giochi{
   background-image: linear-gradient(to bottom, #c9c9c9 0%, #ffffff 7%);
@@ -108,8 +108,9 @@ h5:hover{
 .box{
   border: 2px solid black;
   width: 45%;
-  height: 500px;
+  height: 600px;
   margin-top: 50px;
+  position: relative;
 }
 .box li{
   font-size: 25px;
@@ -117,4 +118,37 @@ h5:hover{
   margin-top: 25px;
 }
 
+.erase{
+  position: absolute;
+  bottom: 20px;
+  margin-left: 32%;
+}
 /* https://i.pinimg.com/originals/2b/3c/32/2b3c32831151c3c0ac0a24e2241f5d7c.jpg */
+h3{
+  margin-top: 100px;
+  font-size: 30px;
+  color: #0172ce;
+}
+
+.ricerca input{
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  width: 30%;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.ricerca button{
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  width: 30%;
+  cursor: pointer;
+  background-color: #0172ce;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.ricerca input:focus{
+  outline: none;
+  text-align: center;
+}
