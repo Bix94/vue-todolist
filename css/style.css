@@ -1,0 +1,100 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.top , .center{
+  height: 50px;
+}
+.top img{
+  height: 100%;
+}
+
+#logo{
+  height: 70px;
+  vertical-align: middle;
+}
+#cerca{
+  font-size: 30px;
+  vertical-align: middle;
+}
+#colore{
+  color: #0172ce;
+  border-bottom: 3px solid #0172ce;
+}
+
+.bottom .sx img{
+  height: 50px;
+}
+.bottom .dx li{
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px 20px;
+}
+li {
+  display: inline;
+  text-decoration: none;
+  color: #7c7c7c;
+  margin-right:10px;
+}
+i{
+  margin-left: 3px;
+}
+li:hover{
+  color: #0172ce;
+}
+
+.locandina{
+  background-image: url(https://www.playstationlifestyle.net/assets/uploads/2019/06/Cyberpunk2077-gameplay-released.jpg);
+  height: 550px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom 30px;
+  background-repeat: no-repeat;
+}
+
+p{
+  font-size: 50px;
+}
+
+.titolo .btn{
+  text-decoration: none;
+  border-radius: 30px;
+  color: white;
+  background-color: #0172ce;
+  padding: 10px 30px;
+  border: none;
+  font-size: 20px;
+}
+ .btn:hover {
+   transform: scale(1.1);
+ }
+
+.giochi{
+  background-image: linear-gradient(to bottom, #c9c9c9 0%, #ffffff 7%);
+  height: 568px;
+}
+
+.consigli img{
+  width: calc(100% / 4 - 15px);
+  margin-right: 20px;
+  height: 350px;
+}
+
+.consigli img:hover{
+  padding: 5px 5px;
+  border: 3px solid #0172ce;
+}
+
+.sfoglia{
+  background-image: linear-gradient(to bottom, #bdbdbd 0%, #ffffff 7%);
+  height: 500px;
+}
+
+
+.box{
+  border: 2px solid black;
+  width: 45%;
+  height: 300px;
+  margin-top: 50px;
+}
