@@ -56,20 +56,27 @@ li:hover{
 p{
   font-size: 50px;
 }
-
-.titolo .btn{
+button:hover{
+  transform: scale(1.1);
+}
+.btn{
   text-decoration: none;
   border-radius: 30px;
   color: white;
-  background-color: #0172ce;
   padding: 10px 30px;
   border: none;
   font-size: 20px;
 }
- .btn:hover {
-   transform: scale(1.1);
- }
+.blue{
+  background-color: #0172ce;
+}
+.grey{
+  background-color: grey;
+}
 
+.btn:hover{
+
+}
 .giochi{
   background-image: linear-gradient(to bottom, #c9c9c9 0%, #ffffff 7%);
   height: 568px;

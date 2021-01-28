@@ -38,8 +38,8 @@
     <div class="dx row aic">
       <ul>
         <li>My PlayStation<i class="fas fa-caret-down"></i></li>
-        <li> <button type="button" name="button"></button>   </li>
-        <li> <i id="cerca" class="fas fa-search"></i></li>
+        <button class="btn grey" type="button" name="button">Accedi</button>
+        <li><i id="cerca" class="fas fa-search"></i></li>
       </ul>
     </div>
     </div>
@@ -63,7 +63,7 @@
   </div>
   <div class="titolo row spb centro mgt_40 mgb_60 aic">
     <p>Cyberpunk 2077</p>
-    <button class="btn" type="button" name="button">Acquista subito</button>
+    <button class="btn blue" type="button" name="button">Acquista subito</button>
   </div>
   <div class="giochi">
     <p class="centro tac pdt_120">Da non perdere</p>
@@ -74,14 +74,15 @@
       <img src="https://image.api.playstation.com/pr/bam-art/111/742/c5baa9e8-22a6-4f9f-8223-d6f2371ace59.jpg?w=780&thumb=false" alt="">
     </div>
   </div>
-  <div class="sfoglia">
+  <div class="sfoglia" >
     <p class="centro tac pdt_120">Aggiungi giochi alla lista</p>
     <div class="row centro spb pdb_50">
-      <div class="box">
-
-      </div>
-      <div class="box">
-
+      <div id="app" class="box">
+        <ol>
+          <li v-for="(game,index) in games">
+            {{game}}  <i class="fas fa-times"></i>
+          </li>
+        </ol>
       </div>
     </div>
   </div>
@@ -94,6 +95,6 @@
 </main>
 
 
-  <script src="js/script.js"></script>
+  <!-- <script src="js/script.js"></script> -->
 </body>
 </html>
