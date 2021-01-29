@@ -37,6 +37,7 @@ var app = new Vue ({
     erase(index){
       var domanda = confirm("Sei sicuro di voler svuotare il carrello?");
       if (domanda === true){
+        // pusho tutto
         for(i=0; i<this.games.length; i++){
           this.gamesRemoved.push(this.games[i]);
         }
@@ -54,6 +55,14 @@ var app = new Vue ({
       }else{
         alert("Operazione annullata");
       }
+    },
+    changeName(index){
+      // chiedo modifica da inserire (lavoro su li)
+      const modifica = prompt('modifica il titolo');
+      // elimino il nome precedente
+      this.games.splice(index,1);
+      // pusho nome nuovo
+      this.games.push(modifica);
     }
   }
 });

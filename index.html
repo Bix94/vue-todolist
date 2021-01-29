@@ -84,7 +84,7 @@
       <div class="box tac">
         <h5> Il tuo carrello</h5>
         <ul class="column" v-if="games.length > 0">
-          <li v-for="(game,index) in games">
+          <li v-for="(game,index) in games" @click = "changeName(index)">
             {{index+1 + ') ' + game}}
             <i class="fas fa-times" @click = "removeGame(index)"></i>
           </li>
@@ -123,9 +123,13 @@
 </main>
 <footer>
   <div class="row mgt_60">
+    <ul class="sony">
+      <li> <img src="https://www.freepnglogos.com/uploads/playstation-png-logo/andtoid-playstation-png-logo-24.png" alt=""> </li>
+      <li><i class="fas fa-globe-europe"></i> Paese / Regione Italia <i class="fas fa-angle-right"></i></li>
 
+    </ul>
   </div>
-  <div class="row jcs mgt_100">
+  <div class="row jcs mgt_60">
     <div class="column mgl_80 mgr_150">
       <ul>
         <li>Supporto</li>
@@ -156,9 +160,9 @@
       </ul>
     </div>
   </div>
-<span class="tac tcw mgt_40">© 2020 Sony Interactive Entertainment Europe Ltd. Tutti i diritti riservati.</span>
+<span class="tac tcw mgt_40 pdb_50">© 2020 Sony Interactive Entertainment Europe Ltd. Tutti i diritti riservati.</span>
 
-
+<!-- modificare un todo :boom: Bonus -->
 </footer>
 
   <script src="js/script.js"></script>
