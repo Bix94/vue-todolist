@@ -31,7 +31,7 @@ body{
   font-size: 20px;
   padding: 20px 20px;
 }
-li {
+header li, main li {
   display: inline;
   text-decoration: none;
   color: #7c7c7c;
@@ -40,7 +40,7 @@ li {
 i{
   margin-left: 3px;
 }
-li:hover{
+header li:hover, main li:hover{
   color: #0172ce;
 }
 
@@ -151,4 +151,39 @@ h3{
 .ricerca input:focus{
   outline: none;
   text-align: center;
+}
+.altro{
+  margin-top: 500px;
+  margin-left: 20px;
+}
+.altro img{
+  height: 330px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.altro img:hover{
+  padding: 5px 5px;
+  border: 3px solid #0172ce;
+}
+
+footer{
+  background-color: #00439c;
+  margin-top: 70px;
+}
+
+footer li{
+  list-style: none;
+  color: white;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+footer li:hover{
+  color: rgb(97, 217, 255);
+}
+
+span{
+  display: inline-block;
+  margin-left: 33%;
 }

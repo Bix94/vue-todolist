@@ -24,7 +24,6 @@ var app = new Vue ({
       this.gamesRemoved.push(this.games[index]);
       // index = premuto  /  1 = solo un elemento
       this.games.splice(index,1);
-      console.log(this.gamesRemoved);
     },
     // pushare in giochi (uno alla volta)
     restoreGame(index){
@@ -38,8 +37,9 @@ var app = new Vue ({
     erase(index){
       var domanda = confirm("Sei sicuro di voler svuotare il carrello?");
       if (domanda === true){
-    // +++ PUSHA ARRAY INTERO CHIEDERE +++
-        this.gamesRemoved.push(this.games);
+        for(i=0; i<this.games.length; i++){
+          this.gamesRemoved.push(this.games[i]);
+        }
         // svuoto tutto
         this.games = [];
       }else{

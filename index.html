@@ -90,29 +90,76 @@
           </li>
           <li class="erase">Svuota carrello <i class="fas fa-ban" @click = "erase"></i></li>
         </ul>
-        <h3 v-else class="hidden">Il tuo carrello è vuoto<i class="fas fa-sad-tear"></i></h3>
+        <div v-else>
+          <h3 >Il tuo carrello è vuoto</h3>
+          <img src="https://lh3.googleusercontent.com/proxy/7AGlWYPqsJS4k1jr5bOCTfipph5w7DexqwgwplK92_e9bb2uNXUXQk2yymQTcwm3uy4gsYVwnl_CYZxNQeGCccPPxZNzBaBJefI3CV1GKk6KNhGgVxpqJ2kAM8_iww" alt="">
+        </div>
       </div>
       <div class="box tac">
         <h5> Il tuo cestino</h5>
         <ul class="column">
-          <li v-for="(game) in gamesRemoved">
+          <li v-for="(game,index) in gamesRemoved">
             {{ game }}
             <i class="fas fa-trash-restore" @click = "restoreGame(index)"></i>
             <i class="fas fa-times" @click = "deleteGame(index)"></i>
           </li>
           <li class="erase" v-if="gamesRemoved.length > 0">Svuota Cestino <i class="fas fa-ban" @click = "eraseCestino"></i></li>
         </ul>
+        <!-- condizioni doppio uguale  -->
+        <h3 v-if="gamesRemoved.length == 0">Il tuo cestino è vuoto</h3>
       </div>
     </div>
   </div>
-
-
-
-
-
-
+  <div class="altro">
+    <img src="https://image.api.playstation.com/pr/bam-art/111/965/8f228b2d-90b3-44c6-85d4-948212968028.jpg?w=780&thumb=false" alt="">
+    <img src="https://image.api.playstation.com/pr/bam-art/109/554/e4b77aa2-28cf-43f9-85be-6ddfdd35983a.png?w=780&thumb=false" alt="">
+    <img src="https://image.api.playstation.com/pr/bam-art/109/552/293aaee5-9284-4db4-8057-0e1bb2239922.png?w=780&thumb=false" alt="">
+    <img src="https://image.api.playstation.com/pr/bam-art/110/425/4de63938-3c4c-4ed8-80e0-b18eb1ef3ebd.png?w=780&thumb=false" alt="">
+    <img src="https://image.api.playstation.com/pr/bam-art/109/549/6e6434dd-c542-44e1-bb0d-d8550b8ed650.png?w=780&thumb=false" alt="">
+    <img src="https://image.api.playstation.com/pr/bam-art/111/152/a3ea162b-deee-485e-b856-f21a36a3e567.jpg?w=780&thumb=false" alt="">
+    <img src="https://image.api.playstation.com/pr/bam-art/108/872/c1b44ce0-ae99-4899-8e39-07d6d24a1b29.png?w=780&thumb=false" alt="">
+    <img src="https://image.api.playstation.com/pr/bam-art/108/872/aa8d2905-f13b-436d-a2cb-92768d85c1cd.png?w=780&thumb=false" alt="">
+  </div>
 </main>
+<footer>
+  <div class="row mgt_60">
 
+  </div>
+  <div class="row jcs mgt_100">
+    <div class="column mgl_80 mgr_150">
+      <ul>
+        <li>Supporto</li>
+        <li>Privacy e cookie</li>
+        <li>Termini di servizio del sito web</li>
+        <li>Mappa del sito</li>
+        <li>Worldwide Studios</li>
+        <li>Terminali legali</li>
+        <li>Informazioni su SIE</li>
+      </ul>
+    </div>
+    <div class="column mgr_80">
+      <ul>
+        <li>Termini di servizio PSN</li>
+        <li>Condizioni di utilizzo del software</li>
+        <li>Politica di annullamento di PS Store</li>
+        <li>Avvertenze per la salute</li>
+        <li>Informazione sulle classificazioni</li>
+      </ul>
+    </div>
+    <div class="column">
+      <ul>
+        <li>Facebook</li>
+        <li>Twitter</li>
+        <li>Youtube</li>
+        <li>App Android</li>
+        <li>App IOS</li>
+      </ul>
+    </div>
+  </div>
+<span class="tac tcw mgt_40">© 2020 Sony Interactive Entertainment Europe Ltd. Tutti i diritti riservati.</span>
+
+
+</footer>
 
   <script src="js/script.js"></script>
 </body>
